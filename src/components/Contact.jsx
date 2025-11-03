@@ -29,7 +29,7 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-3xl sm:text-4xl font-extrabold tracking-tight"
         >
-          Let’s Create Something Legendary
+          Let’s Build Your Future Web
         </motion.h3>
         <motion.p
           initial={{ opacity: 0, y: 16 }}
@@ -44,10 +44,20 @@ const Contact = () => {
         <div className="mt-8">
           <a
             href="mailto:hello@saad.design"
-            className="relative inline-flex items-center justify-center overflow-hidden rounded-full border border-white/10 px-8 py-3 text-sm font-semibold text-white backdrop-blur transition hover:border-white/30"
+            className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-white/10 px-8 py-3 text-sm font-semibold text-white backdrop-blur transition hover:border-white/30"
           >
             <span className="relative z-10">Contact Saad</span>
+            {/* neon bloom */}
             <span className="pointer-events-none absolute inset-0 -z-0 bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.25),transparent_60%)] opacity-80" />
+            {/* web pattern appears on hover */}
+            <svg className="pointer-events-none absolute inset-0 h-full w-full opacity-0 transition-opacity duration-300 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="webPattern" width="10" height="10" patternUnits="userSpaceOnUse">
+                  <path d="M5 0 L5 10 M0 5 L10 5" stroke="rgba(255,255,255,0.15)" strokeWidth="0.6" />
+                </pattern>
+              </defs>
+              <rect x="0" y="0" width="100%" height="100%" fill="url(#webPattern)" />
+            </svg>
           </a>
         </div>
       </div>
